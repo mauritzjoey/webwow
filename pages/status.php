@@ -453,20 +453,17 @@ function getonlineplayers() {
               $status = onlinestatus($realm, $portnr);
               echo $status;
               ?>
-              </center>
+            </center>
         </div>
     </div>
       <div class="col-sm-6 col-xs-6">
         <div class="panel panel-default">
-          <div class="panel-heading">Server Status</div>
+          <div class="panel-heading">Online Player</div>
           <div class="panel-body">
             <div class="progress">
               <div class="progresstext"><?php echo getplayercount(); ?>/100 Players Online</div>
               <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="<?php echo getplayercount(); ?>" aria-valuemin="0" aria-valuemax="100" style="width:<?php echo getplayercount(); ?>%">
               </div>
-
-
-
             </div>
 
             <div class="table-responsive">
@@ -491,16 +488,13 @@ function getonlineplayers() {
 
       <div class="col-sm-6 col-xs-6">
         <div class="panel panel-default">
-          <div class="panel-heading">aaaa</div>
+          <div class="panel-heading">Total Kills</div>
           <div class="panel-body">
-            <div class="progress">
+            <!-- <div class="progress">
               <div class="progresstext"><?php echo getplayercount(); ?>/100 Players Online</div>
               <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="<?php echo getplayercount(); ?>" aria-valuemin="0" aria-valuemax="100" style="width:<?php echo getplayercount(); ?>%">
               </div>
-
-
-
-            </div>
+            </div> -->
 
             <div class="table-responsive">
               <table class="table">

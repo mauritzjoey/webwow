@@ -4,6 +4,7 @@ $dbuser = "root";
 $dbpass = "ascent";
 $accdb = "auth";
 $chardb = "characters";
+$webdb = "web";
 
 //realm
 $realm	= "127.0.0.1";
