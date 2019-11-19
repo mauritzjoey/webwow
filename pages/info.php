@@ -5,6 +5,8 @@
         <div class="panel panel-default">
           <div class="panel-heading">Login</div>
           <div class="panel-body">
+          <div id="error"></div>
+          <div id="success"></div>
             <form action='functions/login.php' method='POST' class='myForm' autocomplete='off'>
               <div class='form-group'>
                 <label for='loginuser'>Username:</label>
@@ -20,19 +22,52 @@
         </div>
 
         <div class="panel panel-default">
-          <div class="panel-heading">Login</div>
+          <div class="panel-heading">Server Status</div>
           <div class="panel-body">
-            <form action='functions/login.php' method='POST' class='myForm' autocomplete='off'>
-              <div class='form-group'>
-                <label for='loginuser'>Username:</label>
-                <input type='text' class='form-control' id='loginuser' name='user'>
+            <center>
+              <?php
+              include('config/dbconf.php');
+              function getplayercount() {
+                include('config/dbconf.php');
+              
+                $online = 1;
+              
+                mysqli_select_db($conn, $chardb);
+                $stmt = $conn->prepare("SELECT * FROM characters WHERE online = ?");
+                $stmt->bind_param("i", $online);
+                $stmt->execute();
+                $stmt->store_result();
+                if($stmt->num_rows > 0) {
+                  echo $stmt->num_rows;
+                }else{
+                  echo 0;
+                }
+              }
+              function onlinestatus($realm, $portnr) {
+
+                error_reporting(0);
+                $fp = (fsockopen($realm, $portnr, $errno, $errstr,3));
+                  if($fp) {
+                  return "Server <font color='00ff00'>Online</font>";
+                  }else{
+                  return "Server <font color='ff0000'>Offline</font>";
+                  }
+              }
+              // exec('Tasklist | findstr "worldserver.exe"', $output);
+              // if(empty($output)) {
+                // echo "Server <font color='ff0000'>Offline</font>";
+              // }else{
+                // echo "Server <font color='00ff00'>Online</font>";
+              // }
+              $status = onlinestatus($realm, $portnr);
+              echo $status;
+              ?>
+            </center>
+            <div class="progress">
+              <div class="progresstext"><?php echo getplayercount(); ?>/100 Players Online</div>
+              <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="<?php echo getplayercount(); ?>" aria-valuemin="0" aria-valuemax="100" style="width:<?php echo getplayercount(); ?>%">
               </div>
-              <div class='form-group'>
-                <label for='loginpass'>Password:</label>
-                <input type='password' class='form-control' id='loginpass' name='pass' autocomplete='new-password'>
-              </div>
-              <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
+            </div>
           </div>
         </div>
       </div>    

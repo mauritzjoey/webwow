@@ -25,9 +25,9 @@
         }
 
         if($page == "status") {
-          echo "<li class='active'><a href='?p=status'>Status</a></li>";
+          echo "<li class='active'><a href='?p=status'>Player Status</a></li>";
         }else{
-          echo "<li><a href='?p=status'>Status</a></li>";
+          echo "<li><a href='?p=status'>Player Status</a></li>";
         }
 
         if($page == "connect") {
