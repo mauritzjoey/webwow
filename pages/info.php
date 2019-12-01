@@ -16,7 +16,8 @@
                 <label for='loginpass'>Password:</label>
                 <input type='password' class='form-control' id='loginpass' name='pass' autocomplete='new-password'>
               </div>
-              <button type="submit" class="btn btn-primary">Submit</button>
+              User Login Coming Soon..
+              <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
             </form>
           </div>
         </div>
@@ -68,6 +69,12 @@
               <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="<?php echo getplayercount(); ?>" aria-valuemin="0" aria-valuemax="100" style="width:<?php echo getplayercount(); ?>%">
               </div>
             </div>
+              <center>
+              <?php
+                include('config/dbconf.php');
+                echo "set realmlist $realm";
+              ?>
+              </center>
           </div>
         </div>
       </div>    
