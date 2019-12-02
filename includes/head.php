@@ -11,6 +11,7 @@
   <script type="text/javascript" src="//ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.min.js"></script>
   <link rel="stylesheet" type="text/css" href="css/main.css">
   <script type="text/javascript" src="js/register.js"></script>
+  <script type="text/javascript" src="js/servstat.js"></script>
   <title><?php echo $servertitle; ?></title>
 </head>
 <body>
