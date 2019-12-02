@@ -460,11 +460,6 @@ function getonlineplayers() {
         <div class="panel panel-default">
           <div class="panel-heading">Online Player</div>
           <div class="panel-body">
-            <!-- <div class="progress">
-              <div class="progresstext"><?php echo getplayercount(); ?>/100 Players Online</div>
-              <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="<?php echo getplayercount(); ?>" aria-valuemin="0" aria-valuemax="100" style="width:<?php echo getplayercount(); ?>%">
-              </div>
-            </div> -->
             <div class="table-responsive">
               <table class="table">
                 <thead>
@@ -489,28 +484,22 @@ function getonlineplayers() {
         <div class="panel panel-default">
           <div class="panel-heading">Total Kills</div>
           <div class="panel-body">
-            <!-- <div class="progress">
-              <div class="progresstext"><?php echo getplayercount(); ?>/100 Players Online</div>
-              <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="<?php echo getplayercount(); ?>" aria-valuemin="0" aria-valuemax="100" style="width:<?php echo getplayercount(); ?>%">
-              </div>
-            </div> -->
-
             <div class="table-responsive">
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th>Name</th>
-                    <th>Class</th>
-                    <th>Race</th>
-                    <th>Level</th>
-                    <th>Faction</th>
-                    <th>Kill</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <?php echo getplayerkill(); ?>
-                </tbody>
-              </table>
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Class</th>
+                      <th>Race</th>
+                      <th>Level</th>
+                      <th>Faction</th>
+                      <th>Kill</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <?php echo getplayerkill(); ?>
+                  </tbody>
+                </table>
             </div>
           </div>
         </div>

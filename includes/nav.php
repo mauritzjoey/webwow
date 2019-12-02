@@ -30,6 +30,12 @@
           echo "<li><a href='?p=status'>Player Status</a></li>";
         }
 
+        if($page == "servstat") {
+          echo "<li class='active'><a href='?p=servstat'>Server Stats</a></li>";
+        }else{
+          echo "<li><a href='?p=servstat'>Server Stats</a></li>";
+        }
+
         if($page == "connect") {
           echo "<li class='active'><a href='?p=connect'>How to Connect</a></li>";
         }else{
