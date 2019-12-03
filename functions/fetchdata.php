@@ -6,12 +6,12 @@ if($action == "ShowKillHon"){
     echo "<table class='table'>";
     echo "<thead>";
     echo "<tr>";
-    echo "<th>Name</th>";
-    echo "<th>Class</th>";
-    echo "<th>Race</th>";
-    echo "<th>Level</th>";
-    echo "<th>Faction</th>";
-    echo "<th>Total Kills</th>";
+    echo "<th class='t-field'>Name</th>";
+    echo "<th class='t-field'>Class</th>";
+    echo "<th class='t-field'>Race</th>";
+    echo "<th class='t-field'>Level</th>";
+    echo "<th class='t-field'>Faction</th>";
+    echo "<th class='t-num'>Total Kills</th>";
     echo "</tr>";
     echo "</thead>";
     echo "<tbody>";
@@ -205,12 +205,12 @@ if($action == "ShowKillHon"){
               $faction = "<img src='images/icons/faction_alliance.gif' title='Alliance' alt='Faction'>";
             }
             echo "<tr>";
-            echo "<td>$colorname</td>";
-            echo "<td>$class</td>";
-            echo "<td>$race</td>";
-            echo "<td>$level</td>";
-            echo "<td>$faction</td>";
-            echo "<td>$totalKills</td>";
+            echo "<td class='t-field'>$colorname</td>";
+            echo "<td class='t-field'>$class</td>";
+            echo "<td class='t-field'>$race</td>";
+            echo "<td class='t-field'>$level</td>";
+            echo "<td class='t-field'>$faction</td>";
+            echo "<td class='t-num'>$totalKills</td>";
             echo "</tr>";
         }
         echo "</tbody>";
@@ -224,12 +224,12 @@ else{
     echo "<table class='table'>";
     echo "<thead>";
     echo "<tr>";
-    echo "<th>Name</th>";
-    echo "<th>Class</th>";
-    echo "<th>Race</th>";
-    echo "<th>Level</th>";
-    echo "<th>Faction</th>";
-    echo "<th>Total Honor</th>";
+    echo "<th class='t-field'>Name</th>";
+    echo "<th class='t-field'>Class</th>";
+    echo "<th class='t-field'>Race</th>";
+    echo "<th class='t-field'>Level</th>";
+    echo "<th class='t-field'>Faction</th>";  
+    echo "<th class='t-num'>Total Honor</th>";
     echo "</tr>";
     echo "</thead>";
     echo "<tbody>";
@@ -423,12 +423,12 @@ else{
               $faction = "<img src='images/icons/faction_alliance.gif' title='Alliance' alt='Faction'>";
             }
             echo "<tr>";
-            echo "<td>$colorname</td>";
-            echo "<td>$class</td>";
-            echo "<td>$race</td>";
-            echo "<td>$level</td>";
-            echo "<td>$faction</td>";
-            echo "<td>$totalhonorpoints</td>";
+            echo "<td class='t-field'>$colorname</td>";
+            echo "<td class='t-field'>$class</td>";
+            echo "<td class='t-field'>$race</td>";
+            echo "<td class='t-field'>$level</td>";
+            echo "<td class='t-field'>$faction</td>";
+            echo "<td class='t-num'>$totalhonorpoints</td>";
             echo "</tr>";
         }
         echo "</tbody>";

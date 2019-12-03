@@ -25,11 +25,24 @@ label {
 }
 
 .table-responsive {
+  align-content: center;
   background-color:#111;
 }
 
-.table * {
+.table {
   border-color:#222 !important;
+}
+
+.t-field {
+  width: 105px;
+}
+
+.t-text {
+  width: 20%;
+}
+
+.t-num {
+  width: 100px;
 }
 
 .mytitle {
