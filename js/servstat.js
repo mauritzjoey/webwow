@@ -13,9 +13,6 @@ $(document).ready(function() {
         }
         KillHon();
     });
-});
-
-$(document).ready(function() {
     $("#btn-1v1").click(function() {
         
         function oneVone() {
@@ -29,5 +26,19 @@ $(document).ready(function() {
             });
         }
         oneVone();
+    });
+    $("#btn-2v2").click(function() {
+        
+        function twoVtwo() {
+            $.ajax({
+                type : "POST",
+                url  : "functions/fetchdata.php",
+                data : {action:"show2v2"},
+                success: function(data){
+                    $("#content").html(data);
+                }
+            });
+        }
+        twoVtwo();
     });
 });
