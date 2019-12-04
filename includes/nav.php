@@ -24,16 +24,16 @@
           echo "<li><a href='?p=register'>Register</a></li>";
         }
 
-        if($page == "status") {
-          echo "<li class='active'><a href='?p=status'>Player Status</a></li>";
+        if($page == "online") {
+          echo "<li class='active'><a href='?p=status'>Online Player</a></li>";
         }else{
-          echo "<li><a href='?p=status'>Player Status</a></li>";
+          echo "<li><a href='?p=online'>Online Player</a></li>";
         }
 
         if($page == "servstat") {
-          echo "<li class='active'><a href='?p=servstat'>Server Stats</a></li>";
+          echo "<li class='active'><a href='?p=servstat'>PVP Stats</a></li>";
         }else{
-          echo "<li><a href='?p=servstat'>Server Stats</a></li>";
+          echo "<li><a href='?p=servstat'>PVP Stats</a></li>";
         }
 
         if($page == "connect") {
@@ -47,6 +47,13 @@
         }else{
           echo "<li><a href='?p=downloads'>Downloads</a></li>";
         }
+        
+        if($page == "summer") {
+          echo "<li class='active'><a href='?p=summer'>summer</a></li>";
+        }else{
+          echo "<li><a href='?p=summer'>summer</a></li>";
+        }
+
         ?>
       </ul>
       <ul class="nav navbar-nav navbar-right">

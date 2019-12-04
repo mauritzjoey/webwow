@@ -72,7 +72,7 @@
               <center>
               <?php
                 include('config/dbconf.php');
-                echo "set realmlist $realm";
+                echo "set realmlist <font color = '00ff00'><b>$realm</b></font>";
               ?>
               </center>
           </div>
@@ -92,16 +92,12 @@
               $stmt->store_result();
               if($stmt->num_rows > 0) {
                 while($stmt->fetch()) {
-                  //echo "<div class='container'>";
-                  //echo "<div class='col-sm-8 col-xs-12'>";
                   echo "<div class='panel panel-default'>";
                   echo "<div class='panel-heading'>".$title."</div>";
-                  echo "<div class='panel-body'>".ucfirst($author)." <small style='font-size:13px;text-align:right;float:right;line-height:30px;'><i>Posted on ".date("F j, Y G:i:s", strtotime($postdate)) . "</i></small>";
+                  echo "<div class='panel-body'><b>".ucfirst($author)."</b> <small style='font-size:13px;text-align:right;float:right;line-height:30px;'><i>Posted on ".date("F j, Y G:i:s", strtotime($postdate)) . "</i></small>";
                   echo "<p>$content</p>";
                   echo "</div>";
-                  echo "</div>";
-                  //echo "</div>";
-                  //echo "</div>";
+                  echo "</div>";  
                 }
               }
             ?>
