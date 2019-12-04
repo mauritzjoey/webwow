@@ -11,4 +11,5 @@ $realm	= "127.0.0.1";
 $portnr = "8085";
 
 $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $accdb);
+$newsconn = mysqli_connect($dbhost, $dbuser, $dbpass, $webdb);
 ?>

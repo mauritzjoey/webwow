@@ -80,13 +80,13 @@
       </div>    
       <div class="col-sm-9 col-xs-12">
         <div class="panel panel-default">
-          <div class="panel-heading">Server Information</div>
+          <div class="panel-heading">Server News</div>
           <div class="panel-body">
             <?php
               include('config/dbconf.php');
 
               mysqli_select_db($conn, $webdb);
-              $stmt = $conn->prepare("SELECT title, content, author, post_date FROM news");
+              $stmt = $conn->prepare("SELECT title, content, author, post_date FROM news order by post_date desc limit 10");
               $stmt->execute();
               $stmt->bind_result($title, $content, $author, $postdate);
               $stmt->store_result();
