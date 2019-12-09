@@ -48,11 +48,11 @@
           echo "<li><a href='?p=downloads'>Downloads</a></li>";
         }
         
-        if($page == "postnews") {
-          echo "<li class='active'><a href='?p=postnews'>postnews</a></li>";
-        }else{
-          echo "<li><a href='?p=postnews'>postnews</a></li>";
-        }
+        // if($page == "postnews") {
+        //   echo "<li class='active'><a href='?p=postnews'>postnews</a></li>";
+        // }else{
+        //   echo "<li><a href='?p=postnews'>postnews</a></li>";
+        // }
 
         ?>
       </ul>

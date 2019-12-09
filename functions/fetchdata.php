@@ -18,7 +18,7 @@ if($action == "ShowKillHon"){
     echo "<tbody>";
 
     mysqli_select_db($conn, $chardb);
-    $stmt = $conn->prepare("SELECT name, race, class, level, gender, totalkills, totalhonorpoints FROM characters ORDER BY totalkills desc, totalhonorpoints DESC LIMIT 50");
+    $stmt = $conn->prepare("SELECT name, race, class, level, gender, totalkills, totalhonorpoints FROM characters where totalkills > 0 OR totalhonorpoints >0 ORDER BY totalkills desc, totalhonorpoints DESC LIMIT 50");
     $stmt->execute();
     $stmt->bind_result($name, $race, $class, $level, $gender, $totalKills, $totalhonorpoints);
     $stmt->store_result();

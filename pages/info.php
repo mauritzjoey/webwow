@@ -93,8 +93,8 @@
               if($stmt->num_rows > 0) {
                 while($stmt->fetch()) {
                   echo "<div class='panel panel-default'>";
-                  echo "<div class='panel-heading'>".$title."</div>";
-                  echo "<div class='panel-body'><b>".ucfirst($author)."</b> <small style='font-size:13px;text-align:right;float:right;line-height:30px;'><i>Posted on ".date("F j, Y H:i:s", strtotime($postdate)) . "</i></small>";
+                  echo "<div class='panel-heading'>".$title."<small style='text-align:right;float:right;'><i>".$author." On ".date("F j, Y H:i:s", strtotime($postdate))."</i></small></div>";
+                  echo "<div class='panel-body'>";
                   echo "<p>$content</p>";
                   echo "</div>";
                   echo "</div>";  
