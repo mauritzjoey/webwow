@@ -1,3 +1,6 @@
+<?php 
+include('config/webconf.php');
+?>
 
 <div class="signin-form">
   <div class="container">
@@ -6,7 +9,7 @@
         <div class="panel panel-default">
           <div class="panel-heading">
           <center>Server PVP Stats</center>
-          <center>Arena Season : 1 (1 Dec 2019 - 29 Feb 2020)</center>
+          <center>Arena Season : <?php echo $pvpseason ?> (<?php echo $pvpdate ?>)</center>
           </div>
             <div class="btn-group btn-group-justified" role="group" aria-label="...">
               <div class="btn-group" role="group">

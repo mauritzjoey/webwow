@@ -41,4 +41,32 @@ $(document).ready(function() {
         }
         twoVtwo();
     });
+    $("#btn-3v3").click(function() {
+        
+        function threeVthree() {
+            $.ajax({
+                type : "POST",
+                url  : "functions/fetchdata.php",
+                data : {action:"show3v3"},
+                success: function(data){
+                    $("#content").html(data);
+                }
+            });
+        }
+        threeVthree();
+    });
+    $("#btn-3v3q").click(function() {
+        
+        function threeVthreeQ() {
+            $.ajax({
+                type : "POST",
+                url  : "functions/fetchdata.php",
+                data : {action:"show3v3q"},
+                success: function(data){
+                    $("#content").html(data);
+                }
+            });
+        }
+        threeVthreeQ();
+    });
 });

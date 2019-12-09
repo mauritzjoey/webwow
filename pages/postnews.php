@@ -1,21 +1,19 @@
 <?php
 include('config/dbconf.php');
 if(isset($_POST['submit'])){
-    $id=3;
     if(isset($_POST['editor']) && !empty($_POST['editor'])){
         $content = $_POST['editor'];
         $title = $_POST['title'];
         $author = $_POST['author'];
-        $id = $id+1;
     }else{
         $empty_error = '<b class="text-danger text-center>Please fill text area</b>';
     }
 }
 
 if(isset($content) && !empty($content)){
-    $sql = "INSERT INTO news (id,title,content,author) VALUES ($id,'$title','$content','$author')";
+    $sql = "INSERT INTO news (title,content,author) VALUES ('$title','$content','$author')";
     if(mysqli_query($newsconn,$sql)){
-
+        $submit_error = '<b class="text-success text-center">Sukses bro</b>';
     }else{
         $submit_error = '<b class="text-danger text-center">gagal</b>';
     }
@@ -28,7 +26,6 @@ if(isset($content) && !empty($content)){
       <div class="col-sm col-xs">
         <div class="panel panel-default">
           <div class="panel-heading">Text Editor</div>
-          <div id="success"></div>
           <div class="panel-body">
             <form action="" method="POST">
                 <div class="form-group">
@@ -42,6 +39,7 @@ if(isset($content) && !empty($content)){
                 <textarea class="ckeditor" id="editor" name="editor"></textarea>
                 <button type="submit" class="btn btn-primary" name="submit" id="btn-postnews" value="SUBMIT">Post</button>
             </form>
+            <?php echo "<div id='success'>$submit_error</div>";?>
           </div>
         </div>
       </div>
