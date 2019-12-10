@@ -1,4 +1,12 @@
 <?php
+//session_start();
+if($_SESSION['username'] != 'q'){
+  header("location: /?p=notfound");
+}
+
+$submit_error = "";
+$empty_error = "";
+
 include('config/dbconf.php');
 if(isset($_POST['submit'])){
     if(isset($_POST['editor']) && !empty($_POST['editor'])){
@@ -18,6 +26,7 @@ if(isset($content) && !empty($content)){
         $submit_error = '<b class="text-danger text-center">gagal</b>';
     }
 }
+
 ?>
 
 <div class="signin-form">
@@ -39,7 +48,7 @@ if(isset($content) && !empty($content)){
                 <textarea class="ckeditor" id="editor" name="editor"></textarea>
                 <button type="submit" class="btn btn-primary" name="submit" id="btn-postnews" value="SUBMIT">Post</button>
             </form>
-            <?php echo "<div id='success'>$submit_error</div>";?>
+            <?php echo "<div id='success'>$submit_error $empty_error</div>";?>
           </div>
         </div>
       </div>

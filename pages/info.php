@@ -1,3 +1,10 @@
+<?php
+  $username = "";
+  if(isset($_SESSION['username'])){
+    $username = $_SESSION['username'];
+  }
+?>
+
 <div class="signin-form">
   <div class="container">
     <div class="row">
@@ -5,20 +12,24 @@
         <div class="panel panel-default">
           <div class="panel-heading">Login</div>
           <div class="panel-body">
-          <div id="error"></div>
-          <div id="success"></div>
-            <form action='functions/login.php' method='POST' class='myForm' autocomplete='off'>
-              <div class='form-group'>
-                <label for='loginuser'>Username:</label>
-                <input type='text' class='form-control' id='loginuser' name='user'>
-              </div>
-              <div class='form-group'>
-                <label for='loginpass'>Password:</label>
-                <input type='password' class='form-control' id='loginpass' name='pass' autocomplete='new-password'>
-              </div>
-              User Login Coming Soon..
-              <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
-            </form>
+          <?php
+            //session_start();
+            if($username == ""){
+              echo "<form action='functions/login.php' method='POST' class='myForm' autocomplete='off'>";
+              echo "<div class='form-group'>";
+              echo "<label for='loginuser'>Username:</label>";
+              echo "<input type='text' class='form-control' id='loginuser' name='loginuser'>";
+              echo "</div>";
+              echo "<div class='form-group'>";
+              echo "<label for='loginpass'>Password:</label>";
+              echo "<input type='password' class='form-control' id='loginpass' name='loginpass' autocomplete='new-password'>";
+              echo "</div>";
+              echo "<button type='submit' class='btn btn-primary'>Login</button>";
+            }
+            else{
+              echo "Welcome, $username";
+            }
+          ?>
           </div>
         </div>
 

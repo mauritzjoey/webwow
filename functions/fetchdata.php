@@ -242,6 +242,7 @@ else if($action=="show1v1"){
                             INNER JOIN arena_team_member atm ON AT.arenaTeamId = atm.arenaTeamid
                             INNER JOIN characters c ON atm.guid = c.guid
                             WHERE AT.`type`=1
+                            AND ats.played > 0
                             ORDER BY rating DESC
                             LIMIT 10");
     $stmt->execute();
@@ -472,6 +473,7 @@ else if($action=="show2v2"){
                           INNER JOIN arena_team_member atm ON AT.arenaTeamId = atm.arenaTeamid
                           INNER JOIN characters c ON atm.guid = c.guid
                           WHERE AT.`type`=2
+                          AND ats.played > 0
                           GROUP BY AT.name
                           ORDER BY rating DESC
                           LIMIT 10");
@@ -667,6 +669,7 @@ else if($action=="show3v3"){
                           INNER JOIN arena_team_member atm ON AT.arenaTeamId = atm.arenaTeamid
                           INNER JOIN characters c ON atm.guid = c.guid
                           WHERE AT.`type`=3
+                          AND ats.played > 0
                           GROUP BY AT.name
                           ORDER BY rating DESC
                           LIMIT 10");
@@ -856,6 +859,7 @@ else if($action=="show3v3q"){
                           INNER JOIN characters c ON atm.guid = c.guid
                           WHERE AT.`type`=5
                           AND isSoloQueueTeam=1
+                          AND ats.played > 0
                           ORDER BY rating DESC
                           LIMIT 10");
   $stmt->execute();

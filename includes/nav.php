@@ -18,6 +18,7 @@
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
         <?php
+        session_start();
         if($page == "register") {
           echo "<li class='active'><a href='?p=register'>Register</a></li>";
         }else{
@@ -48,17 +49,21 @@
           echo "<li><a href='?p=downloads'>Downloads</a></li>";
         }
         
-        // if($page == "postnews") {
-        //   echo "<li class='active'><a href='?p=postnews'>postnews</a></li>";
-        // }else{
-        //   echo "<li><a href='?p=postnews'>postnews</a></li>";
-        // }
-
+        if(isset($_SESSION['username'])){
+          if($_SESSION['username'] == 'q'){
+            if($page == "postnews") {
+              echo "<li class='active'><a href='?p=postnews'>postnews</a></li>";
+            }else{
+              echo "<li><a href='?p=postnews'>postnews</a></li>";
+            }
+          }
+          echo "<li><a href='?p=logout'><span class='glyphicon glyphicon-user'></span><b> Logout</b></a></li>";
+        }
         ?>
       </ul>
-      <ul class="nav navbar-nav navbar-right">
+      <!-- <ul class="nav navbar-nav navbar-right">
         <li><a href="?p=info"><span class="glyphicon glyphicon-search"></span> Info</a></li>
-      </ul>
+      </ul> -->
     </div>
   </div>
 </nav>
