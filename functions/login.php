@@ -9,23 +9,24 @@ function encryptsha($user,$pass) {
   return sha1($user.':'.$pass);
 }
 
-$username = $_POST['loginuser'];
-$password = encryptsha($username, $_POST['loginpass']);
+$userlogin = $_POST['loginuser'];
+$passlogin = encryptsha($userlogin, $_POST['loginpass']);
+
 
 $stmt = $conn->prepare("SELECT username FROM account WHERE username = ? AND sha_pass_hash = ?");
-$stmt->bind_param("ss", $username, $password);
+$stmt->bind_param("ss", $userlogin, $passlogin);
 $stmt->execute();
 $stmt->store_result();
 if($stmt->num_rows > 0) {
-  $_SESSION['username'] = $username;
-  if ($_SESSION['username'] != NULL) {
-      //header("location: ../pages/info.php"); 
-      header("location: /?p=info"); 
-      exit;           
-  }
-   //echo "<div class='alert alert-success'><strong>Success!</strong> You will be logged in on next page refresh</div>";
+  echo "success";
+  $_SESSION['username'] = $userlogin;
+  // if ($_SESSION['username'] != NULL) {
+  //     //header("location: ../pages/info.php"); 
+  //     header("location: /?p=info"); 
+  //     exit;           
+  // }
+  //echo "<div class='alert alert-success'><strong>Success!</strong> You will be logged in on next page refresh</div>";
 }else{
-  $login_error = "Username or Password is not correct !";
-  header("location: /?p=info");
+  echo "failed";
 }
 ?>

@@ -13,6 +13,7 @@
   <link rel="stylesheet" type="text/css" href="css/main.css">
   <script type="text/javascript" src="js/register.js"></script>
   <script type="text/javascript" src="js/servstat.js"></script>
+  <script type="text/javascript" src="js/login.js"></script>
   <script type="text/javascript" src="ckeditor/ckeditor.js"></script>
   <title><?php echo $servertitle; ?></title>
 </head>

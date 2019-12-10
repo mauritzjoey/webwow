@@ -10,12 +10,21 @@
     <div class="row">
       <div class="col-sm-3 col-xs-12">
         <div class="panel panel-default">
-          <div class="panel-heading">Login</div>
+          <div class="panel-heading">
+          <?php
+            if($username == ""){
+              echo "Login";
+            }else{
+              echo "User Information";
+            }
+          ?>
+          </div>
+          <div id="error"></div>
           <div class="panel-body">
           <?php
             //session_start();
             if($username == ""){
-              echo "<form action='functions/login.php' method='POST' class='myForm' autocomplete='off'>";
+              echo "<form action='functions/login.php' method='POST' id='login-form' autocomplete='off'>";
               echo "<div class='form-group'>";
               echo "<label for='loginuser'>Username:</label>";
               echo "<input type='text' class='form-control' id='loginuser' name='loginuser'>";
@@ -24,7 +33,8 @@
               echo "<label for='loginpass'>Password:</label>";
               echo "<input type='password' class='form-control' id='loginpass' name='loginpass' autocomplete='new-password'>";
               echo "</div>";
-              echo "<button type='submit' class='btn btn-primary'>Login</button>";
+              echo "<button type='submit' class='btn btn-primary' value='login' id='btn-login'>Login</button>";
+              echo "</form>";
             }
             else{
               echo "Welcome, $username";
