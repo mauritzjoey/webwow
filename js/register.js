@@ -97,6 +97,7 @@ $('document').ready(function()
                     $(".form-signin").fadeOut(500);
                     $("#success").html("<div class=\'alert alert-success alert-dismissable fade in\'>Successfully created account !<br>set realmlist 127.0.0.1</div>");
                     $("#btn-submit").html('Signing Up');
+                    window.location.replace('/?p=info');
                 }
                 else{
 
