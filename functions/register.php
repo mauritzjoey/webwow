@@ -30,6 +30,7 @@ if(isset($_POST['g-recaptcha-response']) && $_POST['g-recaptcha-response']) {
 	}
 
     $username = $_POST['user'];
+    $usertodb = strtoupper($username);
     $password = encrypt($username, $_POST['pass']);
     $email = $_POST['email'];
     $exp = $_POST['exp'];
@@ -62,7 +63,7 @@ if(isset($_POST['g-recaptcha-response']) && $_POST['g-recaptcha-response']) {
     if($count == 0) {
       $sql = "INSERT INTO account (username,sha_pass_hash,email,expansion) VALUES(?, ?, ?, ?)";
       $stmt = $conn->prepare($sql);	
-      $stmt->bind_param("sssi",$username, $password, $email, $exp);
+      $stmt->bind_param("sssi",$usertodb, $password, $email, $exp);
       if($stmt->execute()) {
         echo "registered";
       }else{
