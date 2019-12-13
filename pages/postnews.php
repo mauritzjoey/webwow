@@ -26,7 +26,6 @@ if(isset($content) && !empty($content)){
         $submit_error = '<b class="text-danger text-center">gagal</b>';
     }
 }
-
 ?>
 
 <div class="signin-form">
