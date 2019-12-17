@@ -13,7 +13,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="?p=info"><?php echo $servertitle; ?></a>
+      <a class="navbar-brand" href="?p=info"><img src='images/rtct.png' title='Ratchet WOW' style='float:left;width:125px;height:70px;'></a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
@@ -61,9 +61,11 @@
         }
         ?>
       </ul>
-      <!-- <ul class="nav navbar-nav navbar-right">
-        <li><a href="?p=info"><span class="glyphicon glyphicon-search"></span> Info</a></li>
-      </ul> -->
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="https://www.facebook.com/ratchetwowpvp" target="_blank"><img src='images/fb.png' width='20' height='20' title='Facebook'></a></li>
+        <li><a href="https://www.youtube.com/channel/UCc423kyNW5o5cKn6SP1yMuQ" target="_blank"><img src='images/ytb.png' width='20' height='20' title='Youtube'></a></li>
+        <li><a href="https://discord.gg/YVkG7U" target="_blank"><img src='images/dscrd.png' width='20' height='20' title='Discord'></a></li>
+      </ul>
     </div>
   </div>
 </nav>

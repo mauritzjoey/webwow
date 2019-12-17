@@ -32,10 +32,11 @@ $(document).ready(function(){
             },
         success: function(data){
             if(data == 'success'){
-                //$(".login-form").fadeOut(500);
-                $("#error").html("<div class=\'alert alert-success alert-dismissable fade in\'>Successfully logged in!</div>");
-                $("#btn-login").html('Login');
-                window.location.replace('/?p=info');
+                $("#error").fadeIn(1000, function(){
+                    $("#error").html("<div class=\'alert alert-success alert-dismissable fade in\'>Successfully logged in!</div>");
+                    $("#btn-login").html('Login');
+                    window.location.replace('/?p=info');
+                });
             }else{
                 $("#error").fadeIn(1000, function(){
                     $("#error").html('<div class="alert alert-danger"> <span class="glyphicon glyphicon-info-sign"></span> &nbsp; Username/Password Incorrect!</div>');

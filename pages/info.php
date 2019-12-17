@@ -70,9 +70,9 @@
                 error_reporting(0);
                 $fp = (fsockopen($realm, $portnr, $errno, $errstr,3));
                   if($fp) {
-                  return "Server <font color='00ff00'>Online</font>";
+                  return "<p style='text-align:center'><img src='images/wotlk.png' title='wotlk'>Ratchet WoW PVP : <font color='00ff00'>Online</font></p>";
                   }else{
-                  return "Server <font color='ff0000'>Offline</font>";
+                  return "<p style='text-align:center'><img src='images/wotlk.png' title='wotlk'>Ratchet WoW PVP : <font color='ff0000'>Offline</font></p>";
                   }
               }
               // exec('Tasklist | findstr "worldserver.exe"', $output);
