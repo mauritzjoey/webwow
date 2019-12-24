@@ -24,6 +24,10 @@ label {
   margin-top:10px !important;
 }
 
+.news {
+  color: gold;
+}
+
 .table-responsive {
   align-content: center;
   background-color:#111;

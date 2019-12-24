@@ -19,10 +19,24 @@
       <ul class="nav navbar-nav">
         <?php
         session_start();
-        if($page == "register") {
-          echo "<li class='active'><a href='?p=register'>Register</a></li>";
+        if(isset($_SESSION['username'])){
+          if($page == "forum") {
+            echo "<li class='disabled'><a href=#>Forum</a></li>";
+          }else{
+            echo "<li class='disabled'><a href=#>Forum</a></li>";
+          }
         }else{
-          echo "<li><a href='?p=register'>Register</a></li>";
+          if($page == "register") {
+            echo "<li class='active'><a href='?p=register'>Register</a></li>";
+          }else{
+            echo "<li><a href='?p=register'>Register</a></li>";
+          }
+        }
+
+        if($page == "news") {
+          echo "<li class='active'><a href='?p=news'>Server News</a></li>";
+        }else{
+          echo "<li><a href='?p=news'>Server News</a></li>";
         }
 
         if($page == "online") {
@@ -43,6 +57,12 @@
           echo "<li><a href='?p=connect'>How to Connect</a></li>";
         }
 
+        if($page == "clog") {
+          echo "<li class='active'><a href='?p=clog'>Changelog</a></li>";
+        }else{
+          echo "<li><a href='?p=clog'>Changelog</a></li>";
+        }
+
         if($page == "downloads") {
           echo "<li class='active'><a href='?p=downloads'>Downloads</a></li>";
         }else{
@@ -52,12 +72,12 @@
         if(isset($_SESSION['username'])){
           if($_SESSION['username'] == 'q'){
             if($page == "postnews") {
-              echo "<li class='active'><a href='?p=postnews'>postnews</a></li>";
+              echo "<li class='active'><a href='?p=postnews'>Postnews</a></li>";
             }else{
-              echo "<li><a href='?p=postnews'>postnews</a></li>";
+              echo "<li><a href='?p=postnews'>Postnews</a></li>";
             }
           }
-          echo "<li><a href='?p=logout'><span class='glyphicon glyphicon-user'></span><b> Logout</b></a></li>";
+          //echo "<li><a href='?p=logout'><span class='glyphicon glyphicon-user'></span><b> Logout</b></a></li>";
         }
         ?>
       </ul>

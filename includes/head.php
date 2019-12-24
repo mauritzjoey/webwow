@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Registration Page for Mangos 2.4.3 Coded by tok124 (Tim Levinsson)">
+  <meta name="description" content="WoW Registration Page Originally coded by tok124 (Tim Levinsson), modified by mauritzjoey">
   <meta charset="UTF-8">
   <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
