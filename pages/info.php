@@ -149,7 +149,7 @@
             $stmt->store_result();
             if($stmt->num_rows > 0) {
                 while($stmt->fetch()) {
-                  echo "<div class='news'>".$title." (<a href='/?p=newsbyid?id=".$newsid."' target='_blank'>view</a>)</div><small style='text-align:right;float:right;'><i>".date("j M y", strtotime($postdate))."</i></small>";
+                  echo "<div class='news'>".$title." (<a href='/?p=newsbyid&id=".$newsid."' target='_blank'>view</a>)</div><small style='text-align:right;float:right;'><i>".date("j M y", strtotime($postdate))."</i></small>";
                   echo "<hr />";
                 }
             }
